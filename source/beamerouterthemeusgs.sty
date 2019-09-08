@@ -53,8 +53,8 @@
 
 
 % Page numbers in head/foot
-\defbeamertemplate*{page number in head/foot}{usgs}
-{}
+\setbeamertemplate{page number in head/foot}[totalframenumber]%
+\setbeamercolor{page number in head/foot}{parent=usgs@grey}
 
 % Headline and footline
 
@@ -63,7 +63,13 @@
 
 \defbeamertemplate*{footline}{usgs}
 {
-    \hspace{1em}\insertlogo%
+    %\hspace{2em}\insertlogo%
+    \hspace{0.2cm}\vspace{0.2cm}
+    %\usebeamercolor[usgs@grey]{page number in head/foot}%
+    %\usebeamercolor{page number in head/foot}%
+    \color{usgs@grey}
+    \usebeamertemplate{page number in head/foot}%
+    \hfill\insertlogo \hspace{0.4cm}
 }
 
 
